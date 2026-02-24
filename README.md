@@ -1,6 +1,6 @@
 # 🌊 DAR Career Portal Scraper
 
-An automated, high-performance job dashboard specifically tailored for the **Hawaii Division of Aquatic Resources (DAR)**. This portal aggregates listings from both the State of Hawaii's Civil Service system and RCUH contract positions into a single, interactive interface.
+An automated, interactive, and exceptionally niche job dashboard specifically tailored for the **Hawaii Division of Aquatic Resources (DAR)**. This portal aggregates listings from both the State of Hawaii's Civil Service system and RCUH contract positions into a single, interactive interface.
 
 ## 🚀 Key Features
 - **Dual-Source Aggregation:** Combines DLNR Civil Service listings (via NEOGOV) and RCUH positions.
