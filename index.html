@@ -10,19 +10,20 @@
         body { background-color: #f4f7f9; font-family: 'Segoe UI', sans-serif; }
         h2 { color: #003366; font-weight: 700; border-left: 6px solid #ce9d00; padding-left: 15px; margin-top: 40px; }
         .table thead { background-color: #003366; color: white; }
-        .salary-toggle { background-color: #ce9d00; color: #003366; font-size: 0.75rem; font-weight: bold; border: 1px solid #003366; padding: 2px 8px; border-radius: 4px; }
-        .btn-apply { background-color: #ce9d00; color: #003366; font-weight: bold; border: none; }
+        .salary-toggle { background-color: #ce9d00; color: #003366; font-size: 0.75rem; font-weight: bold; border: 1px solid #003366; padding: 2px 8px; border-radius: 4px; cursor: pointer;}
+        .btn-apply { background-color: #ce9d00; color: #003366; font-weight: bold; border: none; padding: 5px 15px; }
         
-        /* Selection Highlighting */
-        tr.shown { background-color: #e9ecef !important; border-left: 4px solid #ce9d00; }
+        /* High-Contrast Selected State */
+        tr.shown { background-color: #dee2e6 !important; } /* Darker gray for the row */
         .duties-box { 
             padding: 25px; 
-            background: #e9ecef; /* Matching the darker row highlight */
-            border-bottom: 3px solid #ce9d00;
-            box-shadow: inset 0 4px 6px rgba(0,0,0,0.05);
+            background: #dee2e6; /* Matches the row exactly */
+            border-bottom: 4px solid #ce9d00;
+            color: #212529;
         }
-        .duties-header { color: #003366; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px; }
-        .cursor-pointer tbody tr { cursor: pointer; transition: background 0.2s; }
+        .duties-header { color: #003366; font-weight: bold; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px; border-bottom: 1px solid #ce9d00; display: inline-block; }
+        .cursor-pointer tbody tr { cursor: pointer; transition: background 0.1s; }
+        .cursor-pointer tbody tr:hover { background-color: #f1f1f1; }
     </style>
 </head>
 <body>
@@ -30,7 +31,7 @@
 <div class="container py-5">
     <div class="text-center mb-5">
         <h1 class="display-5 fw-bold" style="color: #003366;">DAR Job Opportunities</h1>
-        <div id="status" class="small text-muted">Loading Portal...</div>
+        <div id="status" class="small text-muted">Refreshing Data...</div>
     </div>
 
     <h2>State Civil Service</h2>
@@ -74,14 +75,15 @@
     };
 
     function formatExpansion(d) {
-        return `<div class="duties-box"><div class="duties-header">Position Duties</div><div class="text-dark">${d.duties}</div></div>`;
+        return `<div class="duties-box"><div class="duties-header">Position Summary</div><div class="mt-2">${d.duties}</div></div>`;
     }
 
     fetch('jobs.json').then(r => r.json()).then(data => {
         document.getElementById('status').innerText = `Last Updated: ${new Date(data.generated_at_utc).toLocaleString()}`;
 
-        const config = (tblData, cols) => ({
-            data: tblData, pageLength: 10, columns: cols
+        const commonConfig = (tblData, cols) => ({
+            data: tblData, pageLength: 10, responsive: true, columns: cols,
+            order: [[0, 'asc']]
         });
 
         const civilCols = [
@@ -96,8 +98,8 @@
             { data: 'link', render: l => `<a href="${l}" target="_blank" class="btn btn-sm btn-apply">Apply</a>` }
         ];
 
-        const cTable = $('#civilTable').DataTable(config(data.civil_service, civilCols));
-        const rTable = $('#rcuhTable').DataTable(config(data.rcuh, rcuhCols));
+        const cTable = $('#civilTable').DataTable(commonConfig(data.civil_service, civilCols));
+        const rTable = $('#rcuhTable').DataTable(commonConfig(data.rcuh, rcuhCols));
 
         $('.table tbody').on('click', 'td:not(:last-child)', function () {
             const table = $(this).closest('table').DataTable();
@@ -108,7 +110,9 @@
                 row.child.hide();
                 tr.removeClass('shown');
             } else {
-                table.rows().every(function() { if(this.child.isShown()){ this.child.hide(); $(this.node()).removeClass('shown'); }});
+                table.rows().every(function() { 
+                    if(this.child.isShown()){ this.child.hide(); $(this.node()).removeClass('shown'); }
+                });
                 row.child(formatExpansion(row.data())).show();
                 tr.addClass('shown');
             }
