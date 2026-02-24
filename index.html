@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAR Career Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    <style>
+        body { background-color: #f4f7f9; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .container { max-width: 1200px; }
+        
+        /* Header Styling */
+        h2 { 
+            color: #003366; 
+            font-weight: 700; 
+            border-left: 6px solid #ce9d00; 
+            padding-left: 15px; 
+            margin-top: 40px; 
+            margin-bottom: 20px;
+        }
+
+        /* Table Customization */
+        .card { border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-radius: 8px; }
+        .table thead { background-color: #003366; color: white; }
+        
+        /* Gold Salary Toggle */
+        .salary-toggle { 
+            background-color: #ce9d00; 
+            color: #003366; 
+            font-size: 0.75rem; 
+            font-weight: bold; 
+            border: 1px solid #003366; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .salary-toggle:hover { background-color: #fff; }
+
+        /* Action Button */
+        .btn-apply { 
+            background-color: #ce9d00; 
+            color: #003366; 
+            font-weight: bold; 
+            border: none; 
+            transition: 0.2s;
+        }
+        .btn-apply:hover { background-color: #003366; color: white; }
+        
+        .status-bar { font-size: 0.85rem; color: #6c757d; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold" style="color: #003366;">DAR Job Opportunities</h1>
+        <div id="status" class="status-bar">Connecting to data source...</div>
+    </div>
+
+    <h2>State Civil Service Positions</h2>
+    <div class="card p-3 mb-5">
+        <table id="civilTable" class="table table-hover w-100">
+            <thead>
+                <tr>
+                    <th>Position Title</th>
+                    <th>Job #</th>
+                    <th>Division</th>
+                    <th>Location</th>
+                    <th>Salary <button id="salaryToggle" class="salary-toggle">Show /mo</button></th>
+                    <th>Closing</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+
+    <h2>RCUH Contract Positions</h2>
+    <div class="card p-3">
+        <table id="rcuhTable" class="table table-hover w-100">
+            <thead>
+                <tr>
+                    <th>Position Title</th>
+                    <th>ID</th>
+                    <th>Location</th>
+                    <th>Deadline</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+    let viewMonthly = false;
+
+    fetch('jobs.json')
+        .then(response => response.json())
+        .then(data => {
+            // Update timestamp
+            const updateTime = new Date(data.generated_at_utc).toLocaleString();
+            document.getElementById('status').innerText = `Data last synchronized: ${updateTime}`;
+
+            // Initialize Civil Service Table
+            const civilTable = $('#civilTable').DataTable({
+                data: data.civil_service,
+                pageLength: 10,
+                columnDefs: [{ targets: [1, 6], orderable: false }], // Disable sort for ID and Action
+                columns: [
+                    { data: 'title', className: 'fw-bold' },
+                    { data: 'job_number' },
+                    { data: 'division' },
+                    { data: 'location' },
+                    { 
+                        data: 'yearly_salary',
+                        render: function(d) {
+                            if (!d) return '<span class="text-muted italic small">See Listing</span>';
+                            let val = viewMonthly ? d / 12 : d;
+                            let label = viewMonthly ? '/mo' : '/yr';
+                            return `<strong>$${val.toLocaleString(undefined, {maximumFractionDigits: 0})}</strong>${label}`;
+                        }
+                    },
+                    { data: 'closing' },
+                    { 
+                        data: 'link', 
+                        render: d => `<a href="${d}" target="_blank" class="btn btn-sm btn-apply">View Job</a>` 
+                    }
+                ]
+            });
+
+            // Initialize RCUH Table
+            $('#rcuhTable').DataTable({
+                data: data.rcuh,
+                pageLength: 10,
+                columns: [
+                    { data: 'title', className: 'fw-bold' },
+                    { data: 'id' },
+                    { data: 'location' },
+                    { data: 'closing' },
+                    { 
+                        data: 'link', 
+                        render: d => `<a href="${d}" target="_blank" class="btn btn-sm btn-apply">View Job</a>` 
+                    }
+                ]
+            });
+
+            // Handle Salary Toggle
+            $('#salaryToggle').on('click', function(e) {
+                e.stopPropagation();
+                viewMonthly = !viewMonthly;
+                $(this).text(viewMonthly ? 'Show /yr' : 'Show /mo');
+                civilTable.rows().invalidate().draw();
+            });
+        })
+        .catch(err => {
+            document.getElementById('status').innerHTML = `<span class="text-danger">Error: ${err.message}. Ensure jobs.json has been generated.</span>`;
+        });
+</script>
+
+</body>
+</html>
