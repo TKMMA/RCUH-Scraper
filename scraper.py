@@ -1,6 +1,7 @@
 import json
 import re
 import requests
+import time
 from datetime import datetime, timezone
 from xml.etree import ElementTree
 from bs4 import BeautifulSoup
@@ -19,6 +20,7 @@ def clean_text(text):
 
 def parse_salary(text):
     if not text: return None
+    # Optimized to catch "$X,XXX.XX per month" or "$XX,XXX per year"
     pattern = r'\$\s*([\d,]+(?:\.\d+)?).*?(month|year|hr|hour|mon)'
     match = re.search(pattern, text, re.IGNORECASE)
     if match:
@@ -32,6 +34,7 @@ def parse_salary(text):
     return None
 
 def scrape_civil_service():
+    """Civil Service is fast and doesn't require throttling."""
     jobs = []
     ns = {'joblisting': 'http://www.neogov.com/namespaces/JobListing'}
     try:
@@ -39,7 +42,7 @@ def scrape_civil_service():
         root = ElementTree.fromstring(r.content)
         for item in root.findall("./channel/item"):
             dept = item.findtext("joblisting:department", namespaces=ns) or ""
-            if "Land & Natural Resources" in dept or "DLNR" in dept:
+            if any(x in dept for x in ["Land & Natural Resources", "DLNR"]):
                 raw_title = item.findtext("title") or ""
                 title_part, loc_part = raw_title.split("-", 1) if "-" in raw_title else (raw_title, "Hawaii")
                 jobs.append({
@@ -51,16 +54,16 @@ def scrape_civil_service():
                     "posted": item.findtext("pubDate")[:16] if item.findtext("pubDate") else "",
                     "closing": item.findtext("joblisting:advertiseToDateTime", namespaces=ns) or "Continuous",
                     "link": item.findtext("link"),
-                    "duties": clean_text(item.findtext("joblisting:examplesofduties", namespaces=ns) or "")
+                    "duties": clean_text(item.findtext("joblisting:examplesofduties", namespaces=ns) or "View listing for details.")
                 })
     except Exception as e: print(f"Civil Error: {e}")
     return jobs
 
 def scrape_rcuh_compass():
+    """Deep-scrapes RCUH with 2-second throttling to prevent blocking."""
     jobs = []
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/91.0.4472.124 Safari/537.36'}
     try:
-        # Using a User-Agent makes the site less likely to block the scraper
-        headers = {'User-Agent': 'Mozilla/5.0'}
         r = requests.get(COMPASS_URL, headers=headers, timeout=30)
         soup = BeautifulSoup(r.text, 'html.parser')
         rows = soup.find_all('tr')
@@ -71,19 +74,39 @@ def scrape_rcuh_compass():
                 title_raw = cols[0].text.split(':', 1)[-1].split('ID#')[0].strip(" –-")
                 id_match = re.search(r'ID#\s*(\d+)', cols[0].text)
                 loc = row.find('span', class_='badge')
-                link = row.find('a')['href'] if row.find('a') else COMPASS_URL
+                link_tag = row.find('a')
+                detail_url = link_tag['href'] if link_tag else None
                 
-                # We stay on the main page for RCUH to ensure the data stays "up"
-                # If we want salaries/duties for RCUH later, we can add a slower, 
-                # more careful sub-scraper. For now, let's get your data back!
+                salary_val = None
+                duties_text = "Detailed duties available on the RCUH portal."
+
+                if detail_url:
+                    # THE THROTTLE: Wait 2 seconds before visiting the next detail page
+                    time.sleep(2) 
+                    try:
+                        det = requests.get(detail_url, headers=headers, timeout=15)
+                        ds = BeautifulSoup(det.text, 'html.parser')
+                        page_text = ds.get_text()
+                        
+                        # Look for Salary (RCUH uses 'MONTHLY SALARY:')
+                        if "MONTHLY SALARY:" in page_text:
+                            sal_line = page_text.split("MONTHLY SALARY:")[1].split(".")[0]
+                            salary_val = parse_salary(sal_line + " per month")
+                        
+                        # Look for Duties
+                        if "DUTIES:" in page_text:
+                            d_raw = page_text.split("DUTIES:")[1].split("PRIMARY QUALIFICATIONS")[0].strip()
+                            duties_text = clean_text(d_raw)
+                    except: pass
+
                 jobs.append({
                     "title": clean_text(title_raw),
                     "id": id_match.group(1) if id_match else "N/A",
                     "location": clean_text(loc.text) if loc else "Hawaii",
-                    "yearly_salary": None, # Placeholder to keep UI from breaking
+                    "yearly_salary": salary_val,
                     "closing": cols[2].text.strip() if len(cols) > 2 else "Continuous",
-                    "link": link,
-                    "duties": "Click 'Apply' to view the full job description and duties on the official RCUH portal."
+                    "link": detail_url,
+                    "duties": duties_text
                 })
     except Exception as e: print(f"RCUH Error: {e}")
     return jobs
