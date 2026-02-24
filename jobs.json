@@ -201,6 +201,736 @@
       "link": "https://www.governmentjobs.com/careers/hawaii/jobs/4553832"
     }
   ],
-  "rcuh": [],
-  "generated_at_utc": "2026-02-24T04:55:13.238481+00:00"
+  "rcuh": [
+    {
+      "title": "Hcri West Hawaii Coral Restoration & Monitoring Tech (rcuh",
+      "id": "225150",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "03/11/2025",
+      "closing": "03/25/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-west-hawaii-coral-restoration-monitoring-tech-rcuh-id-225150-hcri-9vnstkf"
+    },
+    {
+      "title": "Mkwp Nrm/invasive Weed Control Supervisor",
+      "id": "225294",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "06/06/2025",
+      "closing": "12/12/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-nrminvasive-weed-control-supervisor-id-225294-rcuh-vcthn0x"
+    },
+    {
+      "title": "Restoration Management Specialist",
+      "id": "225310",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "06/18/2025",
+      "closing": "10/15/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/restoration-management-specialist-id-225310-rcuh-ae2gvoz"
+    },
+    {
+      "title": "Hcri Ecosystems Protection Data Management Associate (rcuh",
+      "id": "225317",
+      "project": "Conservation / DAR",
+      "location": "Statewide",
+      "posted": "06/23/2025",
+      "closing": "07/14/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-data-management-associate-rcuh-id-225317-hcri-nqzxbcc"
+    },
+    {
+      "title": "Mkwp Wildfire Risk Reduction Coordinator",
+      "id": "225334",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "07/02/2025",
+      "closing": "01/29/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-wildfire-risk-reduction-coordinator-id-225334-rcuh-y6kpj0p"
+    },
+    {
+      "title": "Hcri Boating And Ocean Recreation Accounting Research Associate (rcuh",
+      "id": "225333",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/08/2025",
+      "closing": "07/22/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-boating-ocean-recreation-accounting-research-associate-rcuh-id-225333-hcri-35qgtov"
+    },
+    {
+      "title": "Hcri Makai Watch Associate (rcuh",
+      "id": "225339",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/09/2025",
+      "closing": "07/29/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-makai-watch-associate-rcuh-id-225339-hcri-lnnfrji"
+    },
+    {
+      "title": "Hcri Harbor Research Support Assistant (rcuh",
+      "id": "225342",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/09/2025",
+      "closing": "07/22/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-harbor-research-support-assistant-rcuh-id-225342-hcri-twqjy4t"
+    },
+    {
+      "title": "Hcri Fisheries Database Assistant (rcuh",
+      "id": "225349",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/11/2025",
+      "closing": "07/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-fisheries-database-assistant-rcuh-id-225349-hcri-n40ry4p"
+    },
+    {
+      "title": "Hcri Fisheries Database Assistant (rcuh",
+      "id": "225349",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/11/2025",
+      "closing": "07/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-fisheries-database-assistant-rcuh-id-225349-hcri-lxmobm8"
+    },
+    {
+      "title": "Hcri Fisheries Database Assistant (rcuh",
+      "id": "225349",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/11/2025",
+      "closing": "07/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-fisheries-database-assistant-rcuh-id-225349-hcri-twe5muk"
+    },
+    {
+      "title": "Hcri Fisheries Database Assistant (rcuh",
+      "id": "225349",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/11/2025",
+      "closing": "07/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-fisheries-database-assistant-rcuh-id-225349-hcri-ylo1jlm"
+    },
+    {
+      "title": "Hcri Fisheries Database Assistant (rcuh",
+      "id": "225349",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/11/2025",
+      "closing": "07/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-fisheries-database-assistant-rcuh-id-225349-hcri-flkqgwt"
+    },
+    {
+      "title": "Emwp Natural Resource Managing Coordinator",
+      "id": "225372",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "07/22/2025",
+      "closing": "11/11/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/emwp-natural-resource-managing-coordinator-id-225372-rcuh-nejnq6b"
+    },
+    {
+      "title": "Hcri Aquatic Invasive Species Monitoring Tech I (rcuh",
+      "id": "225380",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "07/29/2025",
+      "closing": "08/11/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-aquatic-invasive-species-monitoring-tech-i-rcuh-id-225380-hcri-hfqohqm"
+    },
+    {
+      "title": "Mkwp Outreach & Education Associate",
+      "id": "225366",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "08/21/2025",
+      "closing": "10/17/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-outreach-education-associate-id-225366-rcuh-sxzvizq"
+    },
+    {
+      "title": "Field Project Technician (hilo)",
+      "id": "225458",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "09/03/2025",
+      "closing": "10/03/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/field-project-technician-hilo-id-225458-rcuh-nll3b1p"
+    },
+    {
+      "title": "Nnrm Restoration & Outplanting Field Assistant",
+      "id": "225459",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "09/03/2025",
+      "closing": "10/10/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/nnrm-restoration-outplanting-field-assistant-id-225459-rcuh-hqzklox"
+    },
+    {
+      "title": "N\u0101pu\u02bbu Nrm Field Assistant (animal)",
+      "id": "225462",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "09/03/2025",
+      "closing": "10/10/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/napuu-nrm-field-assistant-animal-id-225462-rcuh-fln0jtx"
+    },
+    {
+      "title": "Hawai\u02bbi Ant Lab Technician I",
+      "id": "225493",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "09/17/2025",
+      "closing": "10/01/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hawaii-ant-lab-technician-i-id-225493-rcuh-9kmefub"
+    },
+    {
+      "title": "Field Project Technician (kamuela)",
+      "id": "225498",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "09/19/2025",
+      "closing": "12/19/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/field-project-technician-kamuela-id-225498-rcuh-ijuu0bs"
+    },
+    {
+      "title": "Pcsu Community Forester",
+      "id": "225517",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "09/29/2025",
+      "closing": "10/27/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-community-forester-id-225517-rcuh-dmf6orq"
+    },
+    {
+      "title": "Nr/er Field Crew Leader",
+      "id": "225519",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "09/29/2025",
+      "closing": "12/05/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/nrer-field-crew-leader-id-225519-rcuh-01ncjgd"
+    },
+    {
+      "title": "Napu\u02bbu Nrm Botanical Support Technician",
+      "id": "225525",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "10/01/2025",
+      "closing": "11/12/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/napuu-nrm-botanical-support-technician-id-225525-rcuh-hbqj1qb"
+    },
+    {
+      "title": "Tma Field Project Technician",
+      "id": "225533",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "10/03/2025",
+      "closing": "10/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/tma-field-project-technician-id-225533-rcuh-ugi1lga"
+    },
+    {
+      "title": "Hcri Invasive Soft Coral Response Biologist (unomia) (rcuh",
+      "id": "225131",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/03/2025",
+      "closing": "03/23/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-invasive-soft-coral-response-biologist-unomia-rcuh-id-225131-hcri-cn9n7gl"
+    },
+    {
+      "title": "Hcri Invasive Soft Coral Response Biologist (unomia) (rcuh",
+      "id": "225529",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/03/2025",
+      "closing": "10/16/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-aquatic-invasive-species-monitoring-tech-i-rcuh-id-225380-hcri-t8vhynf"
+    },
+    {
+      "title": "Avian Disease Field Associate",
+      "id": "225546",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "10/13/2025",
+      "closing": "10/16/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/avian-disease-field-associate-id-225546-rcuh-zytw35y"
+    },
+    {
+      "title": "Watershed Protection Support Technician I",
+      "id": "225564",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/17/2025",
+      "closing": "11/14/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/watershed-protection-support-technician-i-id-225564-rcuh-j884ral"
+    },
+    {
+      "title": "Hcri Habitat & Fish Monitoring Technician I (rcuh",
+      "id": "225527",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "10/17/2025",
+      "closing": "10/26/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-habitat-fish-monitoring-technician-i-rcuh-id-225527-hcri-yl9cpoe"
+    },
+    {
+      "title": "Pcsu Invasive Species Response Technician I",
+      "id": "225579",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/22/2025",
+      "closing": "11/10/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-invasive-species-response-technician-i-id-225579-rcuh-wndul1b"
+    },
+    {
+      "title": "Hcri Ballast Water And Biofouling Specialist (rcuh",
+      "id": "225567",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/22/2025",
+      "closing": "10/31/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-ballast-water-biofouling-specialist-rcuh-id-225567-hcri-2nmk34x"
+    },
+    {
+      "title": "Hcri Ballast Water And Biofouling Technician (rcuh",
+      "id": "225568",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/23/2025",
+      "closing": "10/31/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-ballast-water-and-biofouling-technician-rcuh-id-225568-hcri-cpuxj1e"
+    },
+    {
+      "title": "Pcsu Statewide Horticulture Coordinator",
+      "id": "225599",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/27/2025",
+      "closing": "12/12/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-statewide-horticulture-coordinator-id-225599-rcuh-9bydd27"
+    },
+    {
+      "title": "Hawai\u2018i Island Plant Extinction Prevention Technician II",
+      "id": "225606",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "10/28/2025",
+      "closing": "11/18/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hawaii-island-plant-extinction-prevention-technician-ii-id-225606-rcuh-u4b5lko"
+    },
+    {
+      "title": "Oisc Program Associate I",
+      "id": "225615",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "10/30/2025",
+      "closing": "01/23/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/oisc-program-associate-i-id-225615-rcuh-mid3fjo"
+    },
+    {
+      "title": "Moloka\u02bbi Pepp Field Assistant I",
+      "id": "225631",
+      "project": "Conservation / DAR",
+      "location": "Moloka\u02bbi",
+      "posted": "11/04/2025",
+      "closing": "11/25/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/molokai-pepp-field-assistant-i-id-225631-rcuh-huovfzg"
+    },
+    {
+      "title": "Moloka\u02bbi Pepp Field Assistant II",
+      "id": "225632",
+      "project": "Conservation / DAR",
+      "location": "Moloka\u02bbi",
+      "posted": "11/04/2025",
+      "closing": "11/25/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/molokai-pepp-field-assistant-ii-id-225632-rcuh-0u0fmly"
+    },
+    {
+      "title": "Tma Field Project Assistant I",
+      "id": "225635",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "11/05/2025",
+      "closing": "11/26/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/tma-field-project-assistant-i-id-225635-rcuh-qx5jzpv"
+    },
+    {
+      "title": "Field Biologist I",
+      "id": "225640",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "11/07/2025",
+      "closing": "11/28/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/field-biologist-i-id-225640-rcuh-rlfhcoo"
+    },
+    {
+      "title": "Pcsu Forestry Field Project Assistant (landscape Conservation)",
+      "id": "225657",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "11/14/2025",
+      "closing": "12/05/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-forestry-field-project-assistant-landscape-conservation-id-225657-rcuh-lzlt3jc"
+    },
+    {
+      "title": "Pcsu/kesrp Field Technician",
+      "id": "225662",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "11/17/2025",
+      "closing": "12/12/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsukesrp-field-technician-id-225662-rcuh-ujsemn3"
+    },
+    {
+      "title": "Pcsu Wildlife Project Assistant",
+      "id": "225664",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "11/17/2025",
+      "closing": "12/08/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-wildlife-project-assistant-id-225664-rcuh-zmmjs4g"
+    },
+    {
+      "title": "Emwp Field Assistant",
+      "id": "225672",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "11/18/2025",
+      "closing": "12/09/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/emwp-field-assistant-id-225672-rcuh-ljqvuqj"
+    },
+    {
+      "title": "Pcsu Forestry Field Crew Leader (landscape Conservation)",
+      "id": "225692",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "12/01/2025",
+      "closing": "12/19/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-forestry-field-crew-leader-landscape-conservation-id-225692-rcuh-nmlzvan"
+    },
+    {
+      "title": "Tma Restoration Supervisor",
+      "id": "225694",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "12/02/2025",
+      "closing": "12/16/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/tma-restoration-supervisor-id-225694-rcuh-zhnbzch"
+    },
+    {
+      "title": "Maui Nr/er Field Associate",
+      "id": "225695",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "12/02/2025",
+      "closing": "12/16/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/maui-nrer-field-associate-id-225695-rcuh-tuae1dp"
+    },
+    {
+      "title": "Ehw Ornithological Field Technician (palila)",
+      "id": "225716",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "12/10/2025",
+      "closing": "12/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/ehw-ornithological-field-technician-palila-id-225716-rcuh-szt52mp"
+    },
+    {
+      "title": "Kfbrp Mosquito Research/control Field Technician I",
+      "id": "225718",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "12/10/2025",
+      "closing": "12/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/kfbrp-mosquito-researchcontrol-field-technician-i-id-225718-rcuh-cdvryk4"
+    },
+    {
+      "title": "Pcsu Forestry Field Project Assistant",
+      "id": "225719",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "12/10/2025",
+      "closing": "12/24/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-forestry-field-project-assistant-id-225719-rcuh-nprfosp"
+    },
+    {
+      "title": "Nnrm Horticulture & Seedbank Technician",
+      "id": "225726",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "12/15/2025",
+      "closing": "01/29/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/nnrm-horticulture-seedbank-technician-id-225726-rcuh-5chx50v"
+    },
+    {
+      "title": "Hcri/dar Coral Restoration Technician (kona) (rcuh",
+      "id": "225706",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "12/15/2025",
+      "closing": "12/19/2025",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcridar-coral-restoration-technician-kona-rcuh-id-225706-hcri-ibmpofp"
+    },
+    {
+      "title": "Mkwp Field Crew Leader (fencing)",
+      "id": "225731",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "12/16/2025",
+      "closing": "02/03/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-field-crew-leader-fencing-id-225731-rcuh-cqreutw"
+    },
+    {
+      "title": "Mkwp Field Crew Leader (ungulate)",
+      "id": "225732",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "12/16/2025",
+      "closing": "03/17/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-field-crew-leader-ungulate-id-225732-rcuh-fyakecm"
+    },
+    {
+      "title": "Kisc Crb Technician",
+      "id": "225736",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "12/17/2025",
+      "closing": "02/11/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/kisc-crb-technician-id-225736-rcuh-qgi9ou1"
+    },
+    {
+      "title": "Ccrt Watershed Protection Technician",
+      "id": "225745",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "12/19/2025",
+      "closing": "02/03/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/ccrt-watershed-protection-technician-id-225745-rcuh-a8etiaf"
+    },
+    {
+      "title": "Hcri Molokai Watershed Field Associate I (rcuh",
+      "id": "225739",
+      "project": "Conservation / DAR",
+      "location": "Moloka\u02bbi",
+      "posted": "12/23/2025",
+      "closing": "01/09/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hcri-molokai-watershed-field-associate-i-rcuh-id-225739-hcri-09wwrtm"
+    },
+    {
+      "title": "Biisc Plant Control Field Crew Leader",
+      "id": "225755",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "12/29/2025",
+      "closing": "02/09/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/biisc-plant-control-field-crew-leader-id-225755-rcuh-mrp2a86"
+    },
+    {
+      "title": "Misc Program Associate I",
+      "id": "225759",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "12/30/2025",
+      "closing": "02/03/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/misc-program-associate-i-id-225759-rcuh-qpsdqjj"
+    },
+    {
+      "title": "Ehw Field Project Assistant",
+      "id": "226004",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/05/2026",
+      "closing": "01/19/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/ehw-field-project-assistant-id-226004-rcuh-hbygf5x"
+    },
+    {
+      "title": "Ehw Ornithological Field Technician",
+      "id": "226009",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/06/2026",
+      "closing": "01/20/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/ehw-ornithological-field-technician-id-226009-rcuh-gtagxyk"
+    },
+    {
+      "title": "Napu\u02bbu Nrm Field Assistant (animal)",
+      "id": "226032",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/15/2026",
+      "closing": "02/26/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/napuu-nrm-field-assistant-animal-id-226032-rcuh-yd66phx"
+    },
+    {
+      "title": "Pcsu Forestry Field Project Assistant (landscape Conservation)",
+      "id": "226035",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "01/15/2026",
+      "closing": "02/19/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-forestry-field-project-assistant-landscape-conservation-id-226035-rcuh-vp0at1y"
+    },
+    {
+      "title": "N\u0101pu\u02bbu Nrm Field Assistant",
+      "id": "226039",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/16/2026",
+      "closing": "02/27/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/napuu-nrm-field-assistant-id-226039-rcuh-8iatlqz"
+    },
+    {
+      "title": "Invasive Species Field Associate I (maui Paia)",
+      "id": "226040",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "01/16/2026",
+      "closing": "02/27/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/invasive-species-field-associate-i-maui-paia-id-226040-rcuh-jo8ajuv"
+    },
+    {
+      "title": "Biisc Invasive Arthropod Outreach Field Associate I",
+      "id": "226045",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/21/2026",
+      "closing": "02/11/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/biisc-invasive-arthropod-outreach-field-associate-i-id-226045-rcuh-vkmnhef"
+    },
+    {
+      "title": "Pcsu Endangered Seabird Field Assistant",
+      "id": "226046",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "01/21/2026",
+      "closing": "02/11/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-endangered-seabird-field-assistant-id-226046-rcuh-6t8oexo"
+    },
+    {
+      "title": "Pcsu/kfbrp Field Associate (mosquito)",
+      "id": "226059",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "01/28/2026",
+      "closing": "02/18/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsukfbrp-field-associate-mosquito-id-226059-rcuh-nevkvgl"
+    },
+    {
+      "title": "Mkfrp Ornithological Field Technician",
+      "id": "226060",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/28/2026",
+      "closing": "03/11/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkfrp-ornithological-field-technician-id-226060-rcuh-avwncp9"
+    },
+    {
+      "title": "Pcsu/kesrp Field Technician",
+      "id": "226068",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "01/29/2026",
+      "closing": "02/12/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsukesrp-field-technician-id-226068-rcuh-n9qze3j"
+    },
+    {
+      "title": "Biisc Outreach & Education Assistant I",
+      "id": "226070",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "01/29/2026",
+      "closing": "02/19/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/biisc-outreach-education-assistant-i-id226070-rcuh-kdqvpip"
+    },
+    {
+      "title": "Mkwp Field Assistant I",
+      "id": "226087",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "02/04/2026",
+      "closing": "02/25/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-field-assistant-i-id-226087-rcuh-jo7jbgr"
+    },
+    {
+      "title": "Mkwp Field Crew Leader",
+      "id": "226088",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "02/05/2026",
+      "closing": "02/26/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-field-crew-leader-id-226088-rcuh-lq1axe5"
+    },
+    {
+      "title": "Kauai Mosquito Research/control Field Supervisor",
+      "id": "226089",
+      "project": "Conservation / DAR",
+      "location": "Kaua\u02bbi",
+      "posted": "02/05/2026",
+      "closing": "02/26/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/kauai-mosquito-researchcontrol-field-supervisor-id-226089-rcuh-qh5z7v6"
+    },
+    {
+      "title": "Hawai\u02bbi Ant Lab Technician I (hilo)",
+      "id": "226097",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "02/12/2026",
+      "closing": "02/22/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/hawaii-ant-lab-technician-i-hilo-id-226097-rcuh-velfkdl"
+    },
+    {
+      "title": "Invasive Species Field Associate I",
+      "id": "226102",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "02/18/2026",
+      "closing": "02/25/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/invasive-species-field-associate-i-id-226102-rcuh-n1du4bk"
+    },
+    {
+      "title": "Invasive Species Field Associate I",
+      "id": "226102",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "02/18/2026",
+      "closing": "02/25/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/invasive-species-field-associate-i-id-226102-rcuh-scxsiaw"
+    },
+    {
+      "title": "Emwp Field Assistant",
+      "id": "226103",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "02/18/2026",
+      "closing": "03/11/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/emwp-field-assistant-id-226103-rcuh-cn2rtak"
+    },
+    {
+      "title": "Pcsu Horticultural Technician",
+      "id": "226104",
+      "project": "Conservation / DAR",
+      "location": "O\u02bbahu",
+      "posted": "02/19/2026",
+      "closing": "03/05/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/pcsu-horticultural-technician-id-226104-rcuh-mjmvwvl"
+    },
+    {
+      "title": "Mkwp Nrm/invasive Weed Control Supervisor",
+      "id": "226112",
+      "project": "Conservation / DAR",
+      "location": "Maui",
+      "posted": "02/23/2026",
+      "closing": "03/16/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/mkwp-nrminvasive-weed-control-supervisor-id-226112-rcuh-rfpzonu"
+    },
+    {
+      "title": "Napu\u02bbu Nrm Botanical Support Technician",
+      "id": "226117",
+      "project": "Conservation / DAR",
+      "location": "Hawai\u02bbi Island",
+      "posted": "02/23/2026",
+      "closing": "03/16/2026",
+      "link": "https://opportunities.conservationcompass.org/opportunity/napuu-nrm-botanical-support-technician-id-226117-rcuh-aa0gqfc"
+    }
+  ],
+  "generated_at_utc": "2026-02-24T05:08:41.243223+00:00"
 }
