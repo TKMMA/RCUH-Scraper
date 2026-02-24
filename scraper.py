@@ -15,12 +15,13 @@ def clean_text(text):
     text = re.sub('<[^<]+?>', ' ', text)
     text = " ".join(text.split())
     words = text.lower().split()
-    caps_list = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "dlnr", "rcuh", "dar", "scuba", "hcri"]
+    # Preserving specific acronyms common in Hawaii DAR/RCUH listings
+    caps_list = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "dlnr", "rcuh", "dar", "scuba", "hcri", "himb"]
     return " ".join(w.upper() if w in caps_list else w.capitalize() for w in words)
 
 def parse_salary(text):
     if not text: return None
-    # Optimized to catch "$X,XXX.XX per month" or "$XX,XXX per year"
+    # Pattern to catch various formats: $4,000 per month, $50,000/yr, etc.
     pattern = r'\$\s*([\d,]+(?:\.\d+)?).*?(month|year|hr|hour|mon)'
     match = re.search(pattern, text, re.IGNORECASE)
     if match:
@@ -34,7 +35,6 @@ def parse_salary(text):
     return None
 
 def scrape_civil_service():
-    """Civil Service is fast and doesn't require throttling."""
     jobs = []
     ns = {'joblisting': 'http://www.neogov.com/namespaces/JobListing'}
     try:
@@ -42,9 +42,11 @@ def scrape_civil_service():
         root = ElementTree.fromstring(r.content)
         for item in root.findall("./channel/item"):
             dept = item.findtext("joblisting:department", namespaces=ns) or ""
+            # Filtering for DLNR-specific roles
             if any(x in dept for x in ["Land & Natural Resources", "DLNR"]):
                 raw_title = item.findtext("title") or ""
                 title_part, loc_part = raw_title.split("-", 1) if "-" in raw_title else (raw_title, "Hawaii")
+                
                 jobs.append({
                     "title": clean_text(title_part),
                     "job_number": item.findtext("joblisting:jobNumberSingle", namespaces=ns) or "N/A",
@@ -60,7 +62,6 @@ def scrape_civil_service():
     return jobs
 
 def scrape_rcuh_compass():
-    """Deep-scrapes RCUH with 2-second throttling to prevent blocking."""
     jobs = []
     headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/91.0.4472.124 Safari/537.36'}
     try:
@@ -81,19 +82,19 @@ def scrape_rcuh_compass():
                 duties_text = "Detailed duties available on the RCUH portal."
 
                 if detail_url:
-                    # THE THROTTLE: Wait 2 seconds before visiting the next detail page
+                    # THROTTLE: Be polite to the server
                     time.sleep(2) 
                     try:
                         det = requests.get(detail_url, headers=headers, timeout=15)
                         ds = BeautifulSoup(det.text, 'html.parser')
                         page_text = ds.get_text()
                         
-                        # Look for Salary (RCUH uses 'MONTHLY SALARY:')
+                        # Extract Salary
                         if "MONTHLY SALARY:" in page_text:
                             sal_line = page_text.split("MONTHLY SALARY:")[1].split(".")[0]
                             salary_val = parse_salary(sal_line + " per month")
                         
-                        # Look for Duties
+                        # Extract Duties text block
                         if "DUTIES:" in page_text:
                             d_raw = page_text.split("DUTIES:")[1].split("PRIMARY QUALIFICATIONS")[0].strip()
                             duties_text = clean_text(d_raw)
