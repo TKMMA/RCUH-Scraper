@@ -1,36 +1,35 @@
-# 🌊 DAR Career Portal Scraper
+# 🌊 RCUH Contract Positions Scraper
 
-An automated, interactive, and exceptionally niche job dashboard specifically tailored for the **Hawaii Division of Aquatic Resources (DAR)**. This portal aggregates listings from both the State of Hawaii's Civil Service system and RCUH contract positions into a single, interactive interface.
+An automated, interactive job dashboard focused specifically on **RCUH contract opportunities** relevant to Hawaii Division of Aquatic Resources programs.
 
 View here:
 https://tkmma.github.io/Double-Scraper/
 
 ## 🚀 Key Features
-- **Dual-Source Aggregation:** Combines DLNR Civil Service listings (via NEOGOV) and RCUH positions.
-- **Throttled Deep-Scraping:** Navigates the RCUH portal through `conservationcompass.org` to bypass session timeouts and bot-detection.
+- **RCUH-Only Aggregation:** Collects active RCUH postings via `conservationcompass.org`.
+- **Throttled Deep-Scraping:** Visits each listing detail page with a delay to reduce session and rate-limit issues.
 - **Interactive UI:** Built with DataTables.js, featuring:
-  - **Keyword & Division Filtering:** Toggle visibility for specific DLNR divisions or RCUH programs like **DAR**, **HCRI**, or **Coral/Fish** specific roles.
-  - **Salary Toggle:** Seamlessly switch between Annual ($/yr) and Monthly ($/mo) salary views.
-  - **Accordion Summaries:** Click any row to view deep-scraped "Duties" and "Qualifications" without leaving the portal.
-- **High-Contrast UX:** Selected rows are highlighted in deep gray to maintain clarity during exploration.
+  - **Keyword Filtering:** Toggle visibility for roles tied to keywords like **DAR**, **HCRI**, **Coral**, and **Fish**.
+  - **Salary Toggle:** Switch between Annual ($/yr) and Monthly ($/mo) salary views.
+  - **Accordion Summaries:** Click a row to view extracted duties without leaving the page.
+- **Readable Visual Theme:** Inter font with a high-visibility palette for fast scanning.
 
-## 🛠️ The "Oracle" Workaround
-Directly scraping the RCUH portal often results in session errors. This project utilizes a **Throttled Hybrid Scraper** that:
-1. Scans `conservationcompass.org` to identify relevant active job IDs.
-2. Implements a **2-second delay** between requests to visit individual job detail pages.
-3. Parses specific text blocks between "DUTIES:" and "PRIMARY QUALIFICATIONS:" to provide real-time job summaries.
+## 🛠️ Scraper Strategy
+Directly scraping the RCUH portal can trigger session issues. This project uses a **throttled hybrid scraper** that:
+1. Scans `conservationcompass.org` for active RCUH jobs.
+2. Applies a **2-second delay** between detail-page requests.
+3. Parses salary and duties content into a normalized JSON file.
 
 ## 🤖 Automation & Deployment
-The portal is fully autonomous:
-- **Scraper:** A Python script (`scraper.py`) runs daily at **8:00 AM HST** via GitHub Actions.
-- **Storage:** Scraped data is saved to `jobs.json`.
-- **Hosting:** The frontend is served via [GitHub Pages](https://tkmma.github.io/Double-Scraper/).
+- **Scraper:** `scraper.py` runs daily at **8:00 AM HST** via GitHub Actions.
+- **Storage:** Output is saved to `jobs.json`.
+- **Hosting:** Frontend is served via GitHub Pages.
 
 ## 📁 Repository Structure
-- `.github/workflows/scrape.yml`: The automation engine (configured with a 15-minute timeout).
-- `scraper.py`: The Python logic for throttled data extraction.
-- `index.html`: The Bootstrap/DataTables frontend.
-- `jobs.json`: The latest synchronized dataset.
+- `.github/workflows/scrape.yml`: Daily automation workflow.
+- `scraper.py`: RCUH scraping logic.
+- `index.html`: Bootstrap/DataTables frontend.
+- `jobs.json`: Latest synchronized dataset.
 
 ---
-*Built for the DAR Team to streamline conservation recruitment in Hawaiʻi.*
+*Built to streamline discovery of RCUH conservation-related positions in Hawaiʻi.*
