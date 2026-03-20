@@ -3,7 +3,7 @@
 An automated, interactive job dashboard focused specifically on **RCUH contract opportunities** relevant to Hawaii Division of Aquatic Resources programs.
 
 View here:
-[https://tkmma.github.io/Double-Scraper/](https://tkmma.github.io/RCUH-Scraper/)
+https://tkmma.github.io/RCUH-Scraper
 
 ## 🚀 Key Features
 - **RCUH-Only Aggregation:** Collects active RCUH postings via `conservationcompass.org`.
